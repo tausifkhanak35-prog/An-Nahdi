@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Nahdi Educational Trust – Donate</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0a3d62;
+            --primary-dark: #0a2f4a;
+            --gradient-start: #1e4b7a;
+            --gradient-end: #0a3d62;
+        }
+        * { font-family: 'Poppins', sans-serif; }
+        body { background: radial-gradient(circle at 10% 30%, #f0f7ff 0%, #e6f0fa 100%); }
+        .btn-gradient {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white; padding: 12px 30px; border-radius: 30px; font-weight: 600;
+            transition: all 0.3s ease; display: inline-block; text-decoration: none;
+        }
+        .btn-gradient:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(10,61,98,0.3); }
+        .btn-outline-primary {
+            border: 2px solid var(--primary-color); color: var(--primary-color);
+            padding: 10px 28px; border-radius: 30px; font-weight: 600;
+            transition: all 0.3s ease; display: inline-block; text-decoration: none;
+        }
+        .btn-outline-primary:hover { background-color: var(--primary-color); color: white; }
+        .btn-whatsapp {
+            background-color: #25D366; color: white; padding: 12px 30px; border-radius: 30px; font-weight: 600;
+            transition: all 0.3s ease; display: inline-block; text-decoration: none;
+        }
+        .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+        .card {
+            background: white; border-radius: 16px; padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%;
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(10,61,98,0.15); }
+        .text-primary { color: var(--primary-color); }
+        .bg-light { background-color: #f8fafc; }
+        .hero-donate {
+            background: linear-gradient(rgba(10,61,98,0.7), rgba(30,144,255,0.6)), url('assets/img/Child.jpeg') no-repeat center center;
+            background-size: cover;
+            color: white;
+        }
+        .copy-btn {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            margin-left: 8px;
+            font-size: 1.1rem;
+        }
+        .copy-btn:hover { color: #0a2f4a; }
+        .copy-message {
+            font-size: 0.8rem;
+            color: green;
+            margin-left: 8px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50" style="background-color: #e3f2fd;">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-[#0a3d62]">An Nahdi Educational Trust</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Home</a>
+                    <a href="about.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">About</a>
+                    <a href="what-we-do.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">What We Do</a>
+                    <a href="gallery.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Gallery</a>
+                    <a href="donate.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Donate</a>
+                    <a href="contact.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-[#0a3d62]"><i class="fas fa-bars text-xl"></i></button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Home</a>
+                    <a href="about.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">About</a>
+                    <a href="what-we-do.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">What We Do</a>
+                    <a href="gallery.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Gallery</a>
+                    <a href="donate.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Donate</a>
+                    <a href="contact.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Donate -->
+    <section class="hero-donate py-20">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Invest in a Child's Future</h1>
+            <p class="text-xl max-w-3xl mx-auto">Your generous contribution directly funds school operations, learning resources, nutritious meals, and teacher salaries. Every rupee brings us closer to an educated India.</p>
+        </div>
+    </section>
+
+    <!-- How Your Donation Helps -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12" data-aos="fade-up">How Your Donation Helps</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="card text-center" data-aos="zoom-in">
+                    <h3 class="text-3xl font-bold text-primary mb-2">₹500</h3>
+                    <p class="text-gray-600">Provides books and stationery for 1 child for a month.</p>
+                </div>
+                <div class="card text-center" data-aos="zoom-in" data-aos-delay="50">
+                    <h3 class="text-3xl font-bold text-primary mb-2">₹1,000</h3>
+                    <p class="text-gray-600">Funds a nutritious mid-day meal for 1 child for a month.</p>
+                </div>
+                <div class="card text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="text-3xl font-bold text-primary mb-2">₹2,500</h3>
+                    <p class="text-gray-600">Supports digital literacy training for 5 children.</p>
+                </div>
+                <div class="card text-center" data-aos="zoom-in" data-aos-delay="150">
+                    <h3 class="text-3xl font-bold text-primary mb-2">₹5,000</h3>
+                    <p class="text-gray-600">Contributes to a teacher's salary for 1 month.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ways to Donate – QR + Bank Details (with copyable UPI) -->
+    <section class="py-16 bg-gradient-to-br from-[#e6f7f2] to-[#ccf2e7]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-6 text-center" data-aos="fade-up">Ways to Donate</h2>
+            <p class="max-w-2xl mx-auto text-gray-700 text-lg mb-8 text-center" data-aos="fade-up">One-Time Donation or Monthly Giving</p>
+            
+            <!-- Two columns: QR and Bank (with copyable UPI) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- QR Code Column -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center" data-aos="zoom-in">
+                    <img src="assets/img/QR.jpeg" alt="Donation QR Code" class="w-48 h-48 mx-auto rounded-xl shadow-md">
+                    <p class="mt-4 text-primary font-semibold">Scan to Donate via UPI</p>
+                </div>
+                
+                <!-- Bank Details Column (with copyable UPI ID) -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-primary mb-4">Bank Transfer Details</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><span class="font-semibold">Account Name:</span> An Nahdi Educational Trust</li>
+                        <li><span class="font-semibold">Account Number:</span> 120036997902</li>
+                        <li><span class="font-semibold">Bank:</span> Canara Bank</li>
+                        <li><span class="font-semibold">Branch:</span> Nanjumalige Branch Mysore</li>
+                        <li><span class="font-semibold">IFSC Code:</span> CNRB0001614</li>
+                        <li><span class="font-semibold">Account Type:</span> Current Account</li>
+                        <li>
+                            <span class="font-semibold">UPI ID:</span> 
+                            <span id="upi-id" class="font-mono bg-gray-100 px-2 py-1 rounded">annahdi@okhdfcbank</span>
+                            <button class="copy-btn" onclick="copyUPI()" title="Copy UPI ID">
+                                <i class="far fa-copy"></i>
+                            </button>
+                            <span id="copy-message" class="copy-message">Copied!</span>
+                        </li>
+                    </ul>
+                    <p class="mt-4 text-sm text-gray-500">*Please share the transaction details with us after donation.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8" data-aos="zoom-in">
+                <a href="https://wa.me/917204371847?text=Hi%2C%20I'm%20interested%20in%20volunteering%20with%20An%20Nahdi%20Educational%20Trust.%20Can%20you%20provide%20more%20information%3F" target="_blank" class="btn-whatsapp inline-flex items-center gap-2">
+                    <i class="fab fa-whatsapp"></i> Volunteer With Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Ways to Support -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-8" data-aos="fade-up">Other Ways to Support</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="card text-center" data-aos="zoom-in">
+                    <i class="fas fa-hands-helping text-5xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Volunteer</h3>
+                    <p>Lend your time and skills to teach or mentor.</p>
+                </div>
+                <div class="card text-center" data-aos="zoom-in" data-aos-delay="50">
+                    <i class="fas fa-building text-5xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Corporate Partnerships</h3>
+                    <p>Align your CSR initiatives with our cause.</p>
+                </div>
+                <div class="card text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-share-alt text-5xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Spread the Word</h3>
+                    <p>Share our mission with your network.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 bg-gradient-to-r from-blue-100 via-blue-50 to-indigo-100">
+        <div class="container mx-auto px-4 text-center" data-aos="zoom-in">
+            <h3 class="text-3xl font-bold mb-4 text-primary">Make a Difference Today</h3>
+            <p class="text-lg text-gray-700 mb-8">Every contribution counts.</p>
+            <a href="contact.html" class="btn-outline-primary">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <span class="text-xl font-bold">An Nahdi Trust</span>
+                    </div>
+                    <p class="text-gray-400">Empowering futures through education and compassion.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="what-we-do.html" class="text-gray-400 hover:text-white">What We Do</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Get Involved</h4>
+                    <ul class="space-y-3">
+                        <li><a href="donate.html" class="text-gray-400 hover:text-white">Donate</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-3"></i>Mysore, Karnataka</li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-3"></i>+91 72043 71847</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-3"></i><a href="mailto:annahdieducationaltrust@gmail.com" class="hover:text-white">annahdieducationaltrust@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; <span id="current-year"></span> AN‑NAHDI EDUCATIONAL TRUST. All Rights Reserved.</p>
+                <p class="mt-2 text-sm">Developed by <a href="mailto:tausifkhanak35@gmail.com" class="text-[#ffd32a] hover:underline">tausifkhanak35@gmail.com</a> | +91 8431455238</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({ duration: 800, once: true, offset: 100 });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuButton = document.getElementById('mobile-menu-button');
+            if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // UPI Copy Function
+        window.copyUPI = function() {
+            const upiText = document.getElementById('upi-id').innerText;
+            navigator.clipboard.writeText(upiText).then(() => {
+                const msg = document.getElementById('copy-message');
+                msg.style.display = 'inline';
+                setTimeout(() => {
+                    msg.style.display = 'none';
+                }, 2000);
+            }).catch(err => {
+                alert('Failed to copy: ' + err);
+            });
+        };
+    </script>
+</body>
+</html>

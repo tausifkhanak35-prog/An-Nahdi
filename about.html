@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Nahdi Educational Trust – About</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0a3d62;
+            --primary-dark: #0a2f4a;
+            --gradient-start: #1e4b7a;
+            --gradient-end: #0a3d62;
+            --bg-soft: #f0f8ff;
+        }
+        * { font-family: 'Poppins', sans-serif; }
+        body { background: radial-gradient(circle at 10% 30%, #f0f7ff 0%, #e6f0fa 100%); }
+        .btn-gradient {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white; padding: 12px 30px; border-radius: 30px; font-weight: 600;
+            transition: all 0.3s ease; display: inline-block; text-decoration: none;
+        }
+        .btn-gradient:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(10,61,98,0.3); }
+        .btn-outline-primary {
+            border: 2px solid var(--primary-color); color: var(--primary-color);
+            padding: 10px 28px; border-radius: 30px; font-weight: 600;
+            transition: all 0.3s ease; display: inline-block; text-decoration: none;
+        }
+        .btn-outline-primary:hover { background-color: var(--primary-color); color: white; }
+        .card {
+            background: white; border-radius: 16px; padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%;
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(10,61,98,0.15); }
+        .text-primary { color: var(--primary-color); }
+        .bg-light { background-color: #f8fafc; }
+    </style>
+</head>
+<body>
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="assets/img/logo.png" alt="Logo" class="h-12 w-auto">
+                    <span class="ml-3 text-xl font-bold text-primary">An Nahdi Trust</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="font-medium text-gray-700 hover:text-primary">Home</a>
+                    <a href="about.html" class="font-medium text-primary hover:text-primary">About</a>
+                    <a href="what-we-do.html" class="font-medium text-gray-700 hover:text-primary">What We Do</a>
+                    <a href="gallery.html" class="font-medium text-gray-700 hover:text-primary">Gallery</a>
+                    <a href="donate.html" class="font-medium text-gray-700 hover:text-primary">Donate</a>
+                    <a href="contact.html" class="font-medium text-gray-700 hover:text-primary">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700"><i class="fas fa-bars text-xl"></i></button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="font-medium text-gray-700 hover:text-primary">Home</a>
+                    <a href="about.html" class="font-medium text-primary hover:text-primary">About</a>
+                    <a href="what-we-do.html" class="font-medium text-gray-700 hover:text-primary">What We Do</a>
+                    <a href="gallery.html" class="font-medium text-gray-700 hover:text-primary">Gallery</a>
+                    <a href="donate.html" class="font-medium text-gray-700 hover:text-primary">Donate</a>
+                    <a href="contact.html" class="font-medium text-gray-700 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="py-20 bg-gradient-to-r from-[#0a3d62] to-[#1e4b7a] text-white">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">About An Nahdi</h1>
+            <p class="text-xl max-w-3xl mx-auto">Our story, mission, and the values that drive us.</p>
+        </div>
+    </section>
+
+    <!-- Our Story & Mission -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-primary mb-6">Our Story & Mission</h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    An Nahdi Educational Trust was born from a simple, powerful belief: every child deserves access to quality education.
+                    Witnessing the stark educational disparities in India—driven by poverty, lack of infrastructure, and social
+                    barriers—we decided to act. Our mission is to provide free, high-quality, and holistic education to
+                    underprivileged children, empowering them to build a better future for themselves and their communities.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Challenge -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-center text-primary mb-8">The Challenge We Address</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="card" data-aos="zoom-in"><i class="fas fa-school text-4xl text-primary mb-4"></i><p>Lack of access to proper schools and learning materials.</p></div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-chart-line text-4xl text-primary mb-4"></i><p>High dropout rates due to economic pressures.</p></div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-chalkboard-teacher text-4xl text-primary mb-4"></i><p>Inadequate infrastructure and a shortage of trained educators.</p></div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-female text-4xl text-primary mb-4"></i><p>Socio-cultural barriers that disproportionately hinder girls' education.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Values -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-primary mb-4">Our Vision</h2>
+                    <p class="text-lg text-gray-700">We envision an India where every child, regardless of their background, has the opportunity to receive an education that nurtures their mind, body, and character, enabling them to become confident, responsible, and future-ready individuals.</p>
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-primary mb-4">Our Values</h2>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><strong>Equity:</strong> We prioritize the most vulnerable.</li>
+                        <li><strong>Quality:</strong> High-standard, holistic learning.</li>
+                        <li><strong>Community:</strong> Working with communities.</li>
+                        <li><strong>Integrity:</strong> Transparency and accountability.</li>
+                        <li><strong>Innovation:</strong> Evolving to meet children's needs.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder's Message -->
+    <section class="py-16 bg-gradient-to-br from-[#fff3e6] to-[#ffe0b3]">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-primary mb-8">Founder's Message</h2>
+                <img src="assets/img/president.png" alt="Mohammed Mutahir" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-lg">
+                <h3 class="text-2xl font-semibold text-primary">Mohammed Mutahir</h3>
+                <p class="font-semibold mb-6">Founder & Secretary, AN-NAHDI Educational Trust</p>
+                <div class="text-left text-gray-800 space-y-4">
+                    <p>Bismillahir Rahmanir Raheem</p>
+                    <p>The journey began with a spark of inspiration — a young man named Wali Rehmani from Kolkata, whose vision for meaningful education deeply moved me...</p>
+                    <p>May Allah grant barakah in this mission, accept our humble efforts, and make AN-NAHDI Educational Trust a beacon of light and opportunity for generations to come.</p>
+                    <p class="pt-2">— Mohammed Mutahir</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 bg-gradient-to-r from-blue-100 via-blue-50 to-indigo-100">
+        <div class="container mx-auto px-4 text-center" data-aos="zoom-in">
+            <h3 class="text-3xl font-bold mb-4 text-primary">Join Our Mission</h3>
+            <p class="text-lg text-gray-700 mb-8">Be part of the change. Volunteer, donate, or spread the word.</p>
+            <a href="donate.html" class="btn-gradient">Support Us</a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <!-- same footer as index -->
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="assets/img/logo.png" alt="Logo" class="h-12 w-auto">
+                        <span class="ml-3 text-xl font-bold">An Nahdi Trust</span>
+                    </div>
+                    <p class="text-gray-400">Empowering futures through education and compassion.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="what-we-do.html" class="text-gray-400 hover:text-white">What We Do</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Get Involved</h4>
+                    <ul class="space-y-3">
+                        <li><a href="donate.html" class="text-gray-400 hover:text-white">Donate</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-3"></i>Mysore, Karnataka</li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-3"></i>+91 72043 71847</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-3"></i><a href="mailto:annahdieducationaltrust@gmail.com" class="hover:text-white">annahdieducationaltrust@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; <span id="current-year"></span> AN‑NAHDI EDUCATIONAL TRUST. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 100 });
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuButton = document.getElementById('mobile-menu-button');
+            if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

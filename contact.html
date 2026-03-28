@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Nahdi Educational Trust – Contact</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0a3d62;
+            --primary-dark: #0a2f4a;
+            --gradient-start: #1e4b7a;
+            --gradient-end: #0a3d62;
+        }
+        * { font-family: 'Poppins', sans-serif; }
+        body { background: radial-gradient(circle at 10% 30%, #f0f7ff 0%, #e6f0fa 100%); }
+        .btn-gradient {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white; padding: 12px 30px; border-radius: 30px; font-weight: 600;
+            transition: all 0.3s ease; display: inline-block; text-decoration: none;
+        }
+        .btn-gradient:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(10,61,98,0.3); }
+        .btn-outline-primary {
+            border: 2px solid var(--primary-color); color: var(--primary-color);
+            padding: 10px 28px; border-radius: 30px; font-weight: 600;
+            transition: all 0.3s ease; display: inline-block; text-decoration: none;
+        }
+        .btn-outline-primary:hover { background-color: var(--primary-color); color: white; }
+        .btn-contact {
+            background-color: white; color: var(--primary-color); padding: 16px; border-radius: 16px;
+            font-weight: 600; box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 10px;
+            border: 2px solid var(--primary-color); text-decoration: none;
+        }
+        .btn-contact:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(10,61,98,0.15);
+            background-color: var(--primary-color); color: white;
+        }
+        .text-primary { color: var(--primary-color); }
+        .bg-light { background-color: #f8fafc; }
+    </style>
+</head>
+<body>
+    <!-- Navigation (updated) -->
+    <header class="sticky top-0 z-50" style="background-color: #e3f2fd;">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-[#0a3d62]">An Nahdi Educational Trust</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Home</a>
+                    <a href="about.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">About</a>
+                    <a href="what-we-do.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">What We Do</a>
+                    <a href="gallery.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Gallery</a>
+                    <a href="donate.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Donate</a>
+                    <a href="contact.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-[#0a3d62]"><i class="fas fa-bars text-xl"></i></button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Home</a>
+                    <a href="about.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">About</a>
+                    <a href="what-we-do.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">What We Do</a>
+                    <a href="gallery.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Gallery</a>
+                    <a href="donate.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Donate</a>
+                    <a href="contact.html" class="font-medium text-[#0a3d62] hover:text-[#ffd32a] transition">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="py-20 bg-gradient-to-r from-[#0a3d62] to-[#1e4b7a] text-white">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h1>
+            <p class="text-xl max-w-3xl mx-auto">We'd love to hear from you. Questions, volunteering, partnerships – reach out.</p>
+        </div>
+    </section>
+
+    <!-- Contact Buttons (replaces form) -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <!-- Email Button -->
+                <a href="mailto:annahdieducationaltrust@gmail.com" class="btn-contact" data-aos="zoom-in">
+                    <i class="fas fa-envelope text-2xl"></i>
+                    <span>Email Us</span>
+                </a>
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/917204371847?text=Hello%2C%20I%20have%20a%20question%20about%20An%20Nahdi%20Educational%20Trust." target="_blank" class="btn-contact" data-aos="zoom-in" data-aos-delay="50">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <!-- Call Button -->
+                <a href="tel:+917204371847" class="btn-contact" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-phone-alt text-2xl"></i>
+                    <span>Call Us</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Cards (optional) -->
+    <section class="py-12 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="card text-center">
+                    <i class="fas fa-map-marker-alt text-4xl text-primary mb-4"></i>
+                    <h3 class="font-bold text-lg">Address</h3>
+                    <p class="text-gray-600">Mysore, Karnataka - 570015</p>
+                </div>
+                <div class="card text-center">
+                    <i class="fas fa-phone text-4xl text-primary mb-4"></i>
+                    <h3 class="font-bold text-lg">Phone</h3>
+                    <p class="text-gray-600">+91 72043 71847</p>
+                </div>
+                <div class="card text-center">
+                    <i class="fas fa-envelope text-4xl text-primary mb-4"></i>
+                    <h3 class="font-bold text-lg">Email</h3>
+                    <p class="text-gray-600">annahdieducationaltrust@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-primary mb-4">Follow Us</h2>
+            <p class="text-gray-600 mb-6">Stay updated on our latest news and impact stories.</p>
+            <div class="flex justify-center space-x-6 text-3xl">
+                <a href="#" class="text-primary hover:text-[#ffd32a] transition"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-primary hover:text-[#ffd32a] transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-primary hover:text-[#ffd32a] transition"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 bg-gradient-to-r from-blue-100 via-blue-50 to-indigo-100">
+        <div class="container mx-auto px-4 text-center" data-aos="zoom-in">
+            <h3 class="text-3xl font-bold mb-4 text-primary">Join Our Mission</h3>
+            <p class="text-lg text-gray-700 mb-8">Together we can empower futures.</p>
+            <a href="donate.html" class="btn-gradient">Support Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <span class="text-xl font-bold">An Nahdi Trust</span>
+                    </div>
+                    <p class="text-gray-400">Empowering futures through education and compassion.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="what-we-do.html" class="text-gray-400 hover:text-white">What We Do</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Get Involved</h4>
+                    <ul class="space-y-3">
+                        <li><a href="donate.html" class="text-gray-400 hover:text-white">Donate</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-3"></i>Mysore, Karnataka</li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-3"></i>+91 72043 71847</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-3"></i><a href="mailto:annahdieducationaltrust@gmail.com" class="hover:text-white">annahdieducationaltrust@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; <span id="current-year"></span> AN‑NAHDI EDUCATIONAL TRUST. All Rights Reserved.</p>
+                <p class="mt-2 text-sm">Developed by <a href="mailto:tausifkhanak35@gmail.com" class="text-[#ffd32a] hover:underline">tausifkhanak35@gmail.com</a> | +91 8431455238</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 100 });
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuButton = document.getElementById('mobile-menu-button');
+            if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
